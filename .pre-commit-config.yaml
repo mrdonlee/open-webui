@@ -14,13 +14,13 @@ repos:
         stages: [commit-msg]
 
   - repo: https://github.com/commitizen-tools/commitizen
-    rev: master
+    rev: "v4.7.0"
     hooks:
       - id: commitizen
       - id: commitizen-branch
         stages: [pre-commit, pre-push]
 
   - repo: https://github.com/fluttercommunity/import_sorter
-    rev: "master"
+    rev: "641f363d40a4ffb42ab577a43433fc48c5059b19"
     hooks:
       - id: flutter-import-sorter
