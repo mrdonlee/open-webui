@@ -1,4 +1,29 @@
 repos:
+  - repo: https://github.com/compilerla/conventional-pre-commit
+    rev: v4.2.0
+    hooks:
+      - id: conventional-pre-commit
+        stages: [commit-msg]
+        args:
+          [
+            --strict,
+            feat,
+            fix,
+            chore,
+            test,
+            build,
+            ci,
+            docs,
+            style,
+            refactor,
+            perf,
+          ]
+
+  - repo: https://github.com/commitizen-tools/commitizen
+    rev: "v4.7.0"
+    hooks:
+      - id: commitizen
+
   - repo: https://github.com/pre-commit/pre-commit-hooks
     rev: v5.0.0
     hooks:
@@ -16,14 +41,3 @@ repos:
         files: ^lib/
       - id: mixed-line-ending
       - id: detect-private-key
-
-  - repo: https://github.com/compilerla/conventional-pre-commit
-    rev: v4.2.0
-    hooks:
-      - id: conventional-pre-commit
-        stages: [commit-msg]
-
-  - repo: https://github.com/commitizen-tools/commitizen
-    rev: "v4.7.0"
-    hooks:
-      - id: commitizen
